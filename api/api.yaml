@@ -1,0 +1,150 @@
+openapi: 3.0.1
+info:
+  title: Workshop GO
+  description: >-
+    Workshop GO: This is an example project used as a reference for GO training.
+  version: 1.0.0
+paths:
+  "/":
+    get:
+      responses:
+        "200":
+          $ref: "#/components/responses/getInfo"
+  "/teams":
+    get:
+      tags:
+        - teams
+      responses:
+        "200":
+          $ref: "#/components/responses/getTeams"
+        "500":
+          $ref: "#/components/responses/500"
+    post:
+      tags:
+        - teams
+      requestBody:
+        $ref: "#/components/requestBodies/postTeam"
+      responses:
+        "201":
+          $ref: "#/components/responses/postTeam"
+        "400":
+          $ref: "#/components/responses/400"
+        "500":
+          $ref: "#/components/responses/500"
+  "/teams/{teamId}":
+    get:
+      tags:
+        - teams
+      parameters:
+        - $ref: "#/components/parameters/TeamId"
+      responses:
+        "200":
+          $ref: "#/components/responses/getTeam"
+        "404":
+          $ref: "#/components/responses/404"
+        "500":
+          $ref: "#/components/responses/500"
+    delete: 
+      tags:
+        - teams
+      parameters:
+        - $ref: "#/components/parameters/TeamId"
+      responses:
+        "204":
+          $ref: "#/components/responses/204"
+        "400":
+          $ref: "#/components/responses/400"
+        "404":
+          $ref: "#/components/responses/404"
+        "500":
+          $ref: "#/components/responses/500"
+components:
+  parameters:
+    TeamId:
+      name: teamId
+      in: path
+      required: true
+      schema:
+        type: string
+  requestBodies:
+    postTeam:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Team"
+  responses:
+    getInfo:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Info"
+    getTeams:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Teams"
+    getTeam:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Team"
+    postTeam:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Team"
+    "204":
+      description: No content
+    "400":
+      description: Bad request
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    "404":
+      description: Not found
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    "500":
+      description: Internal server error
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Error"
+  schemas:
+    Info: 
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string  
+    Teams: 
+      type: object
+      properties:
+        teams:
+          type: array
+          items: 
+            $ref: "#/components/schemas/Team"
+    Team: 
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        group:
+          type: string
+    Error:
+      type: object
+      properties:
+        title:
+          type: string
+        detail:
+          type: string

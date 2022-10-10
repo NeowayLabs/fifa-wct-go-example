@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  fifa-wct-go-example:
+    build:
+      context: ./
+      target: image
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+    depends_on:
+      - mongo
+    restart: on-failure
+    ports:
+      - "80:80"
+
+  mongo:
+    image: mongo:6.0
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - db_data:/data/db
+
+volumes:
+  db_data: {}
