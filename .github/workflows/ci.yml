@@ -1,0 +1,24 @@
+name: CI
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build
+        run: make build
+              
+      - name: Audit
+        run: make audit
+
+      - name: Lint
+        run: make lint
+
+      - name: Unit Test
+        run: make test-unit
+
+      - name: Integration Test
+        run: make test-integration
