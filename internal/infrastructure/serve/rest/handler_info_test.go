@@ -14,7 +14,7 @@ import (
 	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/serve/rest"
 )
 
-func Test_handler_info(t *testing.T) {
+func TestHandlerInfo(t *testing.T) {
 	handler := rest.NewHandler(nil, testLog)
 	server := httptest.NewServer(handler)
 	defer server.Close()

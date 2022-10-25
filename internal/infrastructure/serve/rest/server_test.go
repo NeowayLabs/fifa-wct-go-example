@@ -13,7 +13,7 @@ import (
 	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/serve/rest"
 )
 
-func Test_server_ListenAndServeAndShutdown(t *testing.T) {
+func TestServerListenAndServeAndShutdown(t *testing.T) {
 	handler := http.NewServeMux()
 	handler.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)

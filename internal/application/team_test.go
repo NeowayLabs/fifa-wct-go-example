@@ -12,7 +12,7 @@ import (
 	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/domain"
 )
 
-func Test_teamService_Create(t *testing.T) {
+func TestTeamServiceCreate(t *testing.T) {
 	ctx := context.Background()
 
 	t.Run("should create a team successfully", func(t *testing.T) {
@@ -73,7 +73,7 @@ func Test_teamService_Create(t *testing.T) {
 	})
 }
 
-func Test_teamService_Get(t *testing.T) {
+func TestTeamServiceGet(t *testing.T) {
 	ctx := context.Background()
 
 	t.Run("should get a team successfully", func(t *testing.T) {
@@ -129,7 +129,7 @@ func Test_teamService_Get(t *testing.T) {
 	})
 }
 
-func Test_teamService_Remove(t *testing.T) {
+func TestTeamServiceRemove(t *testing.T) {
 	ctx := context.Background()
 
 	t.Run("should remove a team successfully", func(t *testing.T) {
@@ -177,7 +177,7 @@ func Test_teamService_Remove(t *testing.T) {
 	})
 }
 
-func Test_teamService_GetAll(t *testing.T) {
+func TestTeamServiceGetAll(t *testing.T) {
 	ctx := context.Background()
 
 	t.Run("should get all teams successfully", func(t *testing.T) {
