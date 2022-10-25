@@ -18,7 +18,7 @@ import (
 	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/serve/rest"
 )
 
-func Test_handler_postTeam(t *testing.T) {
+func TestHandlerPostTeam(t *testing.T) {
 	t.Run("should post a team successfully", func(t *testing.T) {
 		service := &application.TeamServiceMock{
 			CreateFn: func(ctx context.Context, input *application.TeamInput) (*application.TeamOutput, error) {
@@ -132,7 +132,7 @@ func Test_handler_postTeam(t *testing.T) {
 	})
 }
 
-func Test_handler_getTeamByID(t *testing.T) {
+func TestHandlerGetTeamByID(t *testing.T) {
 	t.Run("should get a team successfully", func(t *testing.T) {
 		service := &application.TeamServiceMock{
 			GetFn: func(ctx context.Context, ID string) (*application.TeamOutput, error) {
@@ -221,7 +221,7 @@ func Test_handler_getTeamByID(t *testing.T) {
 	})
 }
 
-func Test_handler_deleteTeamByID(t *testing.T) {
+func TestHandlerDeleteTeamByID(t *testing.T) {
 	t.Run("should delete a team successfully", func(t *testing.T) {
 		service := &application.TeamServiceMock{
 			RemoveFn: func(ctx context.Context, ID string) error {
@@ -302,7 +302,7 @@ func Test_handler_deleteTeamByID(t *testing.T) {
 	})
 }
 
-func Test_handler_getTeams(t *testing.T) {
+func TestHandlerGetTeams(t *testing.T) {
 	t.Run("should get all teams successfully", func(t *testing.T) {
 		service := &application.TeamServiceMock{
 			GetAllFn: func(ctx context.Context) ([]*application.TeamOutput, error) {

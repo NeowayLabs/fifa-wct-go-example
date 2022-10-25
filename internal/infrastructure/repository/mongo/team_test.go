@@ -20,7 +20,7 @@ func TestNewTeamRepository(t *testing.T) {
 	assert.NotNil(t, storage)
 }
 
-func Test_teamRepository_InsertOne(t *testing.T) {
+func TestTeamRepositoryInsertOne(t *testing.T) {
 	ctx := context.Background()
 
 	t.Run("should insert a team successfully", func(t *testing.T) {
@@ -59,7 +59,7 @@ func Test_teamRepository_InsertOne(t *testing.T) {
 	})
 }
 
-func Test_teamRepository_FindOne(t *testing.T) {
+func TestTeamRepositoryFindOne(t *testing.T) {
 	ctx := context.Background()
 
 	database := newDatabaseForTest()
@@ -88,7 +88,7 @@ func Test_teamRepository_FindOne(t *testing.T) {
 	})
 }
 
-func Test_teamRepository_DeleteOne(t *testing.T) {
+func TestTeamRepositoryDeleteOne(t *testing.T) {
 	ctx := context.Background()
 
 	database := newDatabaseForTest()
@@ -120,7 +120,7 @@ func Test_teamRepository_DeleteOne(t *testing.T) {
 	})
 }
 
-func Test_teamRepository_Find(t *testing.T) {
+func TestTeamRepositoryFind(t *testing.T) {
 	ctx := context.Background()
 
 	database := newDatabaseForTest()
