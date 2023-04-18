@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
+	internal_mongo "github.com/NeowayLabs/fifa-wct-go-example/internal/infrastructure/repository/mongo"
 	"github.com/stretchr/testify/assert"
-	internal_mongo "gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/repository/mongo"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )

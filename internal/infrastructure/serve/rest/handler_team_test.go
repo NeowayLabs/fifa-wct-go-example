@@ -12,10 +12,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/application"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/domain"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/infrastructure/serve/rest"
 	"github.com/stretchr/testify/assert"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/application"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/domain"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/serve/rest"
 )
 
 func TestHandlerPostTeam(t *testing.T) {

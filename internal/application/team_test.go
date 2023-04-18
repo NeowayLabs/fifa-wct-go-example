@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/application"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/domain"
 	"github.com/stretchr/testify/assert"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/application"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/domain"
 )
 
 func TestTeamServiceCreate(t *testing.T) {
