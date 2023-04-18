@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/application"
 	"github.com/julienschmidt/httprouter"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/application"
 )
 
 type teamRequest struct {

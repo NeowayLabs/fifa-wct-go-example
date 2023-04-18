@@ -5,8 +5,8 @@ package domain_test
 import (
 	"testing"
 
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/domain"
 	"github.com/stretchr/testify/assert"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/domain"
 )
 
 func TestNewTeam(t *testing.T) {

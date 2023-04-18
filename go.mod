@@ -1,4 +1,4 @@
-module gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example
+module github.com/NeowayLabs/fifa-wct-go-example
 
 go 1.19
 

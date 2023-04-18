@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/application"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/repository/mongo"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/serve/rest"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/application"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/infrastructure/repository/mongo"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/infrastructure/serve/rest"
 )
 
 const (

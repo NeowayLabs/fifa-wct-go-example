@@ -5,7 +5,7 @@ package application
 import (
 	"context"
 
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/domain"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/domain"
 )
 
 type TeamServiceMock struct {

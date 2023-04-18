@@ -6,9 +6,9 @@ import (
 	"context"
 	"testing"
 
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/domain"
+	"github.com/NeowayLabs/fifa-wct-go-example/internal/infrastructure/repository/mongo"
 	"github.com/stretchr/testify/assert"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/domain"
-	"gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example/internal/infrastructure/repository/mongo"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

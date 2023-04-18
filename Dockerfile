@@ -1,6 +1,6 @@
 # --- Base ----
-FROM golang:1.19-buster AS base
-WORKDIR $GOPATH/src/gitlab.neoway.com.br/diogo.giassi/fifa-wct-go-example
+FROM golang:1.19 AS base
+WORKDIR $GOPATH/src/github.com/NeowayLabs/fifa-wct-go-example
 
 # ---- Dependencies ----
 FROM base AS dependencies
